@@ -1,0 +1,31 @@
+[gd_scene load_steps=4 format=3 uid="uid://cwp23jte8y4ay"]
+
+[ext_resource type="Texture2D" uid="uid://0lp7e7a57j2e" path="res://assets/PNG/Default size/towerDefense_tile245.png" id="1_728cf"]
+[ext_resource type="Script" path="res://mobs/soldier.gd" id="1_obgrw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h77qc"]
+radius = 16.0312
+
+[node name="PathFollow2D" type="PathFollow2D"]
+script = ExtResource("1_obgrw")
+
+[node name="Soldier" type="CharacterBody2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Soldier"]
+shape = SubResource("CircleShape2D_h77qc")
+
+[node name="TowerDefenseTile245" type="Sprite2D" parent="Soldier"]
+texture = ExtResource("1_728cf")
+
+[node name="LabelNode" type="Node2D" parent="."]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="LabelNode"]
+offset_left = -143.0
+offset_top = -70.0
+offset_right = 144.0
+offset_bottom = -30.0
+bbcode_enabled = true
+text = "test"
+scroll_active = false
+autowrap_mode = 0
